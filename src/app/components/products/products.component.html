@@ -1,0 +1,41 @@
+<h2 class="section-title">Our Products</h2>
+
+<div class="product-count">
+    Total Products: {{products.length}}
+</div>
+<!--Filter Form -->
+<div class="filter-form">
+    <h5>Filter Products</h5>
+    <div class="form-row">
+        <div class="form-group">
+            <label>Category</label>
+            <select #CategoryInput>
+                <option>All</option>
+                <option>Electronics</option>
+                <option>Shoes</option>
+                <option>Clothing</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Product Title</label>
+            <input type="text" placeholder="Search by title..." #productTitleInput />
+        </div>
+        <div class="form-group">
+            <label>Max Price ($)</label>
+            <input type="number" placeholder="Enter max price" #priceInput />
+        </div>
+        <div class="form-group button-group">
+            <button class="btn-primary"
+                (click)="getFilterValues(CategoryInput.value,productTitleInput.value,+priceInput.value)">Apply</button>
+        </div>
+    </div>
+</div>
+
+<!-- Current Filter Values -->
+<div class="filter-values">
+    <p><strong>Category:</strong>{{ currentCategory}} </p>
+    <p><strong>Title Search:</strong> {{ currentProductTitle }} </p>
+    <p><strong>Max Price:</strong> {{ currentPrice}} </p>
+</div>
+
+<h2>products list will appear here soon :)</h2>

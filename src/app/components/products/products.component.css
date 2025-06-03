@@ -1,0 +1,112 @@
+.section-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.product-count {
+    text-align: center;
+    background-color: #e0f3ff;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.filter-form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.filter-form h5 {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.filter-values {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1 1 200px;
+    max-width: 240px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
