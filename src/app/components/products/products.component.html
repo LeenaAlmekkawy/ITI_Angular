@@ -9,24 +9,27 @@
     <div class="form-row">
         <div class="form-group">
             <label>Category</label>
-            <select #CategoryInput>
+            <select #CategoryInput value={{currentCategory}}>
                 <option>All</option>
-                <option>Electronics</option>
-                <option>Shoes</option>
-                <option>Clothing</option>
+                <option *ngFor="let item of categories">{{item}}</option>
+
             </select>
         </div>
         <div class="form-group">
             <label>Product Title</label>
-            <input type="text" placeholder="Search by title..." #productTitleInput />
+            <input type="text" placeholder="Search by title..." #productTitleInput value={{currentProductTitle}} />
         </div>
         <div class="form-group">
             <label>Max Price ($)</label>
-            <input type="number" placeholder="Enter max price" #priceInput />
+            <input type="number" placeholder="Enter max price" value={{currentPrice}} #priceInput />
         </div>
         <div class="form-group button-group">
             <button class="btn-primary"
                 (click)="getFilterValues(CategoryInput.value,productTitleInput.value,+priceInput.value)">Apply</button>
+        </div>
+        <br>
+        <div class="form-group button-group">
+            <button class="btn-primary" (click)="getFilterValues('All','',+500)">Reset</button>
         </div>
     </div>
 </div>
@@ -38,4 +41,15 @@
     <p><strong>Max Price:</strong> {{ currentPrice}} </p>
 </div>
 
-<h2>products list will appear here soon :)</h2>
+
+<div class="product-grid">
+    <div class="product-card" *ngFor="let item of products">
+        <img src={{item.images[0]}} alt="Product Name">
+        <div class="category">{{item.category}}</div>
+        <h4>{{item.title}}</h4>
+        <p class="price">${{item.price}}</p>
+        <p class="rating">★★★★★</p>
+        <button>Add to Cart</button>
+    </div>
+    <!-- Repeat .product-card as needed -->
+</div>
